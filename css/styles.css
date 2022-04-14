@@ -106,6 +106,8 @@ h1, h2, h3, h4, h5, h6, p {
   color: var(--primery-text-color);
 }
 
+
+
 /* Флекс для расположения элементов шапки */
 .page-header > .container,
 .header-nav {
@@ -140,6 +142,14 @@ h1, h2, h3, h4, h5, h6, p {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+  max-width: 1600px;
+  background-color: #C4C4C4;;
+  background-image: 
+  linear-gradient( to right, 
+  rgba(47, 48, 58, 0.4), 
+  rgba(47, 48, 58, 0.4)), 
+  url('/images/Hero.jpg');
+  background-position: center;
 }
 
 .hero-title {
@@ -205,8 +215,39 @@ background-color: var(--hover-focus-btn);
  width: 270px;
  margin-right: 30px;
 }
+/* Вставка svg-иконок с помощью псевдоэлемента */
+.feature-item::before {
+  content: "";
+  display: block;
+  height: 120px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #F5F4FA;
+  margin-bottom: 30px;
+}
 
-.feature-title {
+.icon-antenna::before {
+  background-image: url(../images/antenna.svg);
+  background-size: 70px;
+}
+
+.icon-clock::before {
+  background-image: url(../images/clock.svg);
+  background-size: 70px;
+}
+
+.icon-diagram::before {
+  background-image: url(../images/diagram.svg);
+  background-size: 70px;
+}
+
+.icon-astronaut::before {
+  background-image: url(../images/astronaut.svg);
+  background-size: 70px;
+}
+
+.feature-title,
+.footer-title {
   color: var(--title-text-color);
   font-weight: 700;
   font-size: var(--main-font-size);
@@ -276,11 +317,20 @@ img {
   letter-spacing: 0.03em;
 }
 
-/* Стили футера страницы Студия */
+/* Стили для футера проекта */
 .page-footer {
   background: var(--second-background-color);
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.page-footer > .container {
+  display: flex;
+}
+
+.page-footer .inner+.inner {
+  margin-left: 70px;
+  margin-top: 12px;
 }
 
 .footer-address {
@@ -304,8 +354,56 @@ img {
 }
 
 .footer.logo,
-.footer-address-link {
+.footer-address-link,
+.footer-title {
   color: var(--white-text-color);
+}
+
+/* Вставка svg-иконок соц-сетей */
+.social.list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  min-width: 205px;
+}
+
+.social-link {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.social-link:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
+}
+
+.icon-instagram {
+  background-image: url('../images/instagram.svg');
+  background-size: 20px;
+}
+
+.icon-twitter {
+  background-image: url('../images/twitter.svg');
+  background-size: 20px;
+}
+
+.icon-facebook {
+  background-image: url('../images/facebook.svg');
+  background-size: 20px;
+}
+
+.icon-linkedin {
+  background-image: url('../images/linkedin.svg');
+  background-size: 20px;
 }
 
 /* Стили для страницы Портфолио */
