@@ -161,7 +161,7 @@ img {
   linear-gradient( to right, 
   rgba(47, 48, 58, 0.4), 
   rgba(47, 48, 58, 0.4)), 
-  url('/images/Hero.jpg');
+  url('../images/Hero.jpg');
   background-position: center;
 }
 
