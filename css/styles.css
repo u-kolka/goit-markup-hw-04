@@ -88,9 +88,7 @@ h1, h2, h3, h4, h5, h6, p {
   line-height: 1.14;
   text-decoration: none;
   letter-spacing: 0.02em;
-
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding: 12px 10px;
 }
 
 .site-nav-link:hover,
@@ -104,9 +102,14 @@ h1, h2, h3, h4, h5, h6, p {
 /* Пеопределение цвета для контактов студии */
 .site-contact-link {
   color: var(--primery-text-color);
+  display: flex;
+  align-items: center;
 }
 
-
+.site-contact-link > .icon {
+  fill: currentColor;
+  margin-right: 10px;
+}
 
 /* Флекс для расположения элементов шапки */
 .page-header > .container,
@@ -125,15 +128,12 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .site-contact {
+  /* display: flex; */
   margin-left: auto;
 }
 
-.site-contact > .item {
-  display: inline-block;
-}
-
 .site-contact > .item + .item {
-  margin-left: 50px;
+  margin-left: 30px;
 }
 
 /* Стилизация Основного контента страницы. Секция герой */
@@ -215,33 +215,35 @@ background-color: var(--hover-focus-btn);
  width: 270px;
  margin-right: 30px;
 }
-/* Вставка svg-иконок с помощью псевдоэлемента */
-.feature-item::before {
-  content: "";
-  display: block;
-  height: 120px;
-  background-repeat: no-repeat;
-  background-position: center;
+
+/* Вставка svg-иконок  */
+.thumb {
   background-color: #F5F4FA;
+  text-align: center;
+  padding: 25px 100px;
   margin-bottom: 30px;
 }
 
-.icon-antenna::before {
-  background-image: url(../images/antenna.svg);
-  background-size: 70px;
+.feature-item .icon {
+  display: block;
+  fill: currentColor;
 }
 
-.icon-clock::before {
+.icon-antenna {
+  padding: 25px 100px;
+}
+
+.icon-clock {
   background-image: url(../images/clock.svg);
   background-size: 70px;
 }
 
-.icon-diagram::before {
+.icon-diagram {
   background-image: url(../images/diagram.svg);
   background-size: 70px;
 }
 
-.icon-astronaut::before {
+.icon-astronaut {
   background-image: url(../images/astronaut.svg);
   background-size: 70px;
 }
@@ -317,6 +319,44 @@ img {
   letter-spacing: 0.03em;
 }
 
+.icon {
+  fill: currentColor;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: #AFB1B8;
+}
+/* Стили для Секции Постоянные клиенты */
+
+.company.list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.company .item {
+  width: 170px;
+  height: 92px;
+  border: 1px solid #AFB1B8;
+}
+
+.company-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #AFB1B8;
+  height: 100%;
+  width: 100%;
+}  
+
+.company .icon {
+  fill: currentColor;
+}
 /* Стили для футера проекта */
 .page-footer {
   background: var(--second-background-color);
@@ -349,7 +389,9 @@ img {
 }
 
 .footer-link:hover,
-.footer-link:focus {
+.footer-link:focus,
+.company-link:hover,
+.company-link:focus {
   color: var(--accent-color);
 }
 
@@ -359,52 +401,29 @@ img {
   color: var(--white-text-color);
 }
 
-/* Вставка svg-иконок соц-сетей */
+/* Вставка svg-иконок соц-сетей Футера */
 .social.list {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
-  min-width: 205px;
+  margin-top: 20px;
+  max-width: 205px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.social-link {
-  display: inline-block;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
+.page-footer .social-link {
   background-color: rgba(255, 255, 255, 0.1);
-  background-repeat: no-repeat;
-  background-position: center;
-}
+  color: var(--white-text-color);
 
-.social-link:not(:last-child) {
-  margin-right: 10px;
 }
 
 .social-link:hover,
 .social-link:focus {
   background-color: var(--accent-color);
+  color: white;
 }
 
-.icon-instagram {
-  background-image: url('../images/instagram.svg');
-  background-size: 20px;
-}
-
-.icon-twitter {
-  background-image: url('../images/twitter.svg');
-  background-size: 20px;
-}
-
-.icon-facebook {
-  background-image: url('../images/facebook.svg');
-  background-size: 20px;
-}
-
-.icon-linkedin {
-  background-image: url('../images/linkedin.svg');
-  background-size: 20px;
-}
 
 /* Стили для страницы Портфолио */
 .filter-btn {
