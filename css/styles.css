@@ -100,7 +100,7 @@ img {
   line-height: 1.14;
   text-decoration: none;
   letter-spacing: 0.02em;
-  padding: 12px 10px;
+  padding: 12px 0;
 }
 
 .site-nav-link:hover,
@@ -161,8 +161,10 @@ img {
   linear-gradient( to right, 
   rgba(47, 48, 58, 0.4), 
   rgba(47, 48, 58, 0.4)), 
-  url('/images/Hero.jpg');
+  url('../images/Hero.jpg');
   background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .hero-title {
@@ -221,8 +223,11 @@ background-color: var(--hover-focus-btn);
 .thumb {
   background-color: #F5F4FA;
   text-align: center;
-  padding: 25px 100px;
+  height: 120px;
   margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .feature-title,
@@ -307,7 +312,6 @@ background-color: var(--hover-focus-btn);
 .company .item {
   width: 170px;
   height: 92px;
-  border: 1px solid var(--grey-color);
 }
 
 .company-link {
@@ -317,6 +321,8 @@ background-color: var(--hover-focus-btn);
   color: var(--grey-color);
   height: 100%;
   width: 100%;
+  border: 1px solid var(--grey-color);
+  border-radius: 4px;
 }  
 
 /* Стили для футера проекта */
@@ -328,15 +334,15 @@ background-color: var(--hover-focus-btn);
 
 .page-footer > .container {
   display: flex;
+  align-items: baseline;
 }
 
 .page-footer .inner+.inner {
   margin-left: 70px;
-  margin-top: 12px;
 }
 
-.footer-address {
-  margin-top: 20px;
+.footer-title {
+  margin-bottom: 20px;
 }
 
 .site-contact > .footer-item + .footer-item {
@@ -355,6 +361,7 @@ background-color: var(--hover-focus-btn);
 .company-link:hover,
 .company-link:focus {
   color: var(--accent-color);
+  border-color: inherit;
 }
 
 .footer.logo,
@@ -366,12 +373,9 @@ background-color: var(--hover-focus-btn);
 /* Вставка svg-иконок соц-сетей Футера */
 .social.list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 20px;
   margin-top: 20px;
-  max-width: 205px;
-  margin-left: auto;
-  margin-right: auto;
 }
 .social-item + .social-item {
 margin-left: 10px;
@@ -407,7 +411,6 @@ margin-left: 10px;
 
 .filter-btn:hover,
 .filter-btn:focus {
-  outline: none;
   color: var(--white-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
@@ -459,7 +462,6 @@ margin-left: 10px;
 
 .project-link:hover,
 .project-link:focus {
-  outline: none;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
   0px 4px 4px rgba(0, 0, 0, 0.06),
   1px 4px 6px rgba(0, 0, 0, 0.16);
